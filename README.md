@@ -32,3 +32,4 @@ Check the render method of `App`. See https://fb.me/react-warning-keys for more 
 
 ### Reference link:
 - [react docs lists-and-keys](https://reactjs.org/docs/lists-and-keys.html#keys)
+- [https://kentcdodds.com/blog/understanding-reacts-key-prop](https://kentcdodds.com/blog/understanding-reacts-key-prop)
