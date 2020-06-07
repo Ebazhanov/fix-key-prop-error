@@ -1,6 +1,4 @@
-### This project demonstrates how to fix the error:
-> Each child in a list should have a unique "key" prop.
-
+### This project demonstrates how to fix the error: Each child in a list should have a unique "key" prop.
 ```markdown
 index.js:1 Warning: Each child in a list should have a unique "key" prop.
 
@@ -9,9 +7,9 @@ Check the render method of `App`. See https://fb.me/react-warning-keys for more 
     in App (at src/index.js:9)
     in StrictMode (at src/index.js:8)
 ```
+> Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity:
 
-#### **Variant #1** is not good because we can catch duplication 
-> add `key={num}`
+#### **Variant #1** Add `key={num}` the best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use IDs from your data as keys:
 ```javascript
 <ul>
     {numbers.map((num) => (
@@ -19,8 +17,7 @@ Check the render method of `App`. See https://fb.me/react-warning-keys for more 
     ))}
 </ul>
 ```
-#### **Variant #2** also not the best but already can be a good solution
-> add `index`
+#### **Variant #2** Add `index` when you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
 ```javascript
 <ul>
     {numbers.map((num, index) => (
@@ -29,6 +26,9 @@ Check the render method of `App`. See https://fb.me/react-warning-keys for more 
 </ul>
 ```
 
-##### Usage: 
+### Usage: 
 - `yarn start`
 - demo [https://fix-key-prop-error.netlify.app/](https://fix-key-prop-error.netlify.app/)
+
+### Reference link:
+- [react docs lists-and-keys](https://reactjs.org/docs/lists-and-keys.html#keys)
